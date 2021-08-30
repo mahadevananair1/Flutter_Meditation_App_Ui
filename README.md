@@ -24,6 +24,6 @@ Check here:
 https://github.com/mahadevananair1/Meditation_App/graphs/commit-activity
 
 ### Disclaimer:
-The date and commit activity link is shared to make sure that If any one copies this repo and uploades it on github like thier work during placements season etc. They can be caught cheating and completely rejected. 
+The date and commit activity link is shared to make sure that If any one copies this repo and uploades it on github like their work during placements season etc. They can be caught cheating and completely rejected. 
 
-*If you are someone like that you  deserve the Finger and spit on your face. **NOT A JOB !** *
+*If you are someone like that you  deserve the Finger and spit on your face. **NOT A JOB !** 
