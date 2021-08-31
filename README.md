@@ -15,9 +15,9 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-
-<img src="https://github.com/mahadevananair1/Meditation_App/blob/master/LoginPage.png" alt="log in page screenshot" height=700>
-<img src="https://github.com/mahadevananair1/Meditation_App/blob/master/Home_pagePartial.png" alt="Home page screenshot" height=700>
+<p float="left">
+<img src="https://github.com/mahadevananair1/Meditation_App/blob/master/LoginPage.png" alt="log in page screenshot" height=700> | <img src="https://github.com/mahadevananair1/Meditation_App/blob/master/Home_pagePartial.png" alt="Home page screenshot" height=700>
+</p>
 
 ### Created On
 #### 28/09/2021 by Mahadevan A Nair ©
