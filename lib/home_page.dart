@@ -48,14 +48,19 @@ class _HomePageState extends State<HomePage> {
             children: [
               Text(
                 "GOOD MORNING",
-                style: TextStyle(fontSize: 30, fontFamily: 'Mitr'),
+                style: TextStyle(
+                    fontSize: 30,
+                    color: Color(0xff3F414E),
+                    fontFamily: 'Raleway',
+                    fontWeight: FontWeight.bold),
               ),
               Text(
                 "Have a peacefull and wonderfull day",
                 style: TextStyle(
                     fontSize: 15,
-                    color: Colors.lightBlueAccent[200],
-                    fontFamily: 'Mitr'),
+                    color: Colors.grey[800],
+                    fontWeight: FontWeight.w400,
+                    fontFamily: 'Montserrat'),
               ),
             ],
           ),
@@ -74,10 +79,7 @@ class _HomePageState extends State<HomePage> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
-                      child: Container(
-                        height: 210,
-                        // color: Colors.amberAccent,
-                      ),
+                      child: cardHome1(),
                     ),
                   ),
                   SizedBox(
@@ -85,14 +87,11 @@ class _HomePageState extends State<HomePage> {
                   ),
                   Expanded(
                     child: Card(
-                      color: Colors.black,
+                      // color: Color(0xffFFDB9D),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
-                      child: Container(
-                        height: 210,
-                        // color: Colors.green,
-                      ),
+                      child: cardHome2(),
                     ),
                   )
                 ],
@@ -101,6 +100,10 @@ class _HomePageState extends State<HomePage> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(25)),
                   child: Container(
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image:
+                                AssetImage('assets/images/Player_home.png'))),
                     padding: EdgeInsets.all(4),
                     height: 95,
                     child: Row(
@@ -116,11 +119,13 @@ class _HomePageState extends State<HomePage> {
                                 children: [
                                   Text(
                                     "Flow with wind ",
-                                    style: TextStyle(fontSize: 20),
+                                    style: TextStyle(
+                                        fontSize: 20, color: Colors.white),
                                   ),
                                   Text(
                                     'Meditation',
-                                    style: TextStyle(fontSize: 16),
+                                    style: TextStyle(
+                                        fontSize: 16, color: Colors.white),
                                   )
                                 ],
                               ),
@@ -132,6 +137,7 @@ class _HomePageState extends State<HomePage> {
                           child: Icon(
                             Icons.play_circle_fill,
                             size: 45,
+                            color: Colors.white,
                           ),
                         )
                       ],
@@ -143,4 +149,118 @@ class _HomePageState extends State<HomePage> {
       ],
     );
   }
+
+  Container cardHome1() {
+    return Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/images/Card1_home.jpg'),
+          fit: BoxFit.fill,
+          // alignment: Alignment.topCenter,
+        ),
+      ),
+      padding: EdgeInsets.all(15),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Row(
+            children: [
+              Text(
+                "Basics",
+                style: TextStyle(fontSize: 18, color: Colors.white),
+              ),
+              SizedBox(width: 5),
+            ],
+          ),
+          SizedBox(
+            height: 55,
+          ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(bottom: 7.0),
+                child: Text(
+                  "3-10 min",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+              Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15)),
+                color: Color(0xffEBEAEC),
+                child: Padding(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                  child: Text(
+                    "Start",
+                    style: TextStyle(color: Colors.black),
+                  ),
+                ),
+              )
+            ],
+          ),
+        ],
+      ),
+      height: 210,
+    );
+  }
+}
+
+Container cardHome2() {
+  return Container(
+    decoration: BoxDecoration(
+      image: DecorationImage(
+        image: AssetImage('assets/images/Card2_home.jpg'),
+        fit: BoxFit.fill,
+        // alignment: Alignment.topCenter,
+      ),
+    ),
+    padding: EdgeInsets.all(15),
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        Row(
+          children: [
+            Text(
+              "Relaxation",
+              style: TextStyle(fontSize: 18),
+            ),
+            SizedBox(width: 5),
+          ],
+        ),
+        SizedBox(
+          height: 55,
+        ),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(bottom: 7.0),
+              child: Text(
+                "3-10 min",
+                style: TextStyle(color: Colors.black),
+              ),
+            ),
+            Card(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15)),
+              color: Color(0xff3F414E),
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                child: Text(
+                  "Start",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            )
+          ],
+        ),
+      ],
+    ),
+    height: 210,
+  );
 }
