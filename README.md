@@ -16,7 +16,7 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 <p float="left">
-<img src="https://github.com/mahadevananair1/Meditation_App/blob/master/LoginPage.png" alt="log in page screenshot" height=700> | <img src="https://github.com/mahadevananair1/Meditation_App/blob/master/Home_pagePartial.png" alt="Home page screenshot" height=700>
+<img src="https://github.com/mahadevananair1/Meditation_App/blob/master/LoginPage.png" alt="log in page screenshot" height=700> | <img src="https://github.com/mahadevananair1/Meditation_App/blob/master/HomePage.png" alt="Home page screenshot" height=700>
 </p>
 
 ### Created On
