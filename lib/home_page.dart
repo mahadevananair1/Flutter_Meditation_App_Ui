@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:meditation_app/scrollList.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -57,6 +59,7 @@ class _HomePageState extends State<HomePage> {
 
   Column bodyPanel() {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         // Good morning Text Container
         Container(
@@ -168,14 +171,67 @@ class _HomePageState extends State<HomePage> {
 
         Expanded(
             child: Container(
-          color: Colors.red,
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("Recomendations"),
-              SizedBox(
-                height: 5,
+              Text(
+                "Recomendations",
+                style: TextStyle(fontSize: 25),
               ),
-              ListTile()
+              SizedBox(
+                height: 10,
+              ),
+              SizedBox(
+                height: 163,
+                child: ListView.separated(
+                  itemBuilder: (context, index) => GestureDetector(
+                    onTap: () {},
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Color(0xffFBD89F)),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20)),
+                              width: 150,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20),
+                                child: Image(
+                                    image:
+                                        NetworkImage(scrollItems[index].image)),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 13,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 12),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              textDirection: TextDirection.ltr,
+                              children: [
+                                Text(
+                                  scrollItems[index].name,
+                                  style: TextStyle(fontSize: 18),
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  separatorBuilder: (_, index) => SizedBox(width: 20),
+                  scrollDirection: Axis.horizontal,
+                  itemCount: scrollItems.length,
+                ),
+              )
             ],
           ),
         ))
