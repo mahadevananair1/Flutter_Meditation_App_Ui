@@ -33,6 +33,22 @@ class _HomePageState extends State<HomePage> {
               child: bodyPanel(),
               padding: EdgeInsets.all(20),
             ),
+            bottomNavigationBar: BottomNavigationBar(
+              items: [
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.home),
+                  label: 'Home',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.business),
+                  label: 'Business',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.school),
+                  label: 'School',
+                ),
+              ],
+            ),
           ),
         ],
       ),
@@ -42,6 +58,7 @@ class _HomePageState extends State<HomePage> {
   Column bodyPanel() {
     return Column(
       children: [
+        // Good morning Text Container
         Container(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -65,9 +82,11 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
+        // Sized Box for spacing
         SizedBox(
           height: 10,
         ),
+        // Top Card stack section with the player
         Container(
           child: Column(
             children: [
@@ -146,10 +165,25 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
+
+        Expanded(
+            child: Container(
+          color: Colors.red,
+          child: Column(
+            children: [
+              Text("Recomendations"),
+              SizedBox(
+                height: 5,
+              ),
+              ListTile()
+            ],
+          ),
+        ))
       ],
     );
   }
 
+  // Function for Each cards
   Container cardHome1() {
     return Container(
       decoration: BoxDecoration(
