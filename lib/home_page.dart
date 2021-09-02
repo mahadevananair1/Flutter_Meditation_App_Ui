@@ -175,8 +175,12 @@ class _HomePageState extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Recomendations",
-                style: TextStyle(fontSize: 25),
+                "Recomended for you",
+                style: TextStyle(
+                    fontSize: 25,
+                    color: Colors.grey[700],
+                    fontFamily: 'Mitr',
+                    fontWeight: FontWeight.w100),
               ),
               SizedBox(
                 height: 10,
@@ -218,7 +222,10 @@ class _HomePageState extends State<HomePage> {
                               children: [
                                 Text(
                                   scrollItems[index].name,
-                                  style: TextStyle(fontSize: 18),
+                                  style: TextStyle(
+                                      fontSize: 19,
+                                      fontFamily: 'Raleway',
+                                      fontWeight: FontWeight.bold),
                                 ),
                               ],
                             ),
