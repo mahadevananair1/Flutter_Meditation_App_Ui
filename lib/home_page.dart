@@ -42,12 +42,12 @@ class _HomePageState extends State<HomePage> {
                   label: 'Home',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.business),
-                  label: 'Business',
+                  icon: Icon(Icons.local_hotel),
+                  label: 'Sleep',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.school),
-                  label: 'School',
+                  icon: Icon(Icons.person),
+                  label: 'Profile',
                 ),
               ],
             ),
